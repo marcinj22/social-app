@@ -12,9 +12,7 @@ const Home = () => {
         axios.post("https://akademia108.pl/api/social-app/post/latest").then((res) => {
             setPosts(res.data)
         })
-            .catch((error) => {
-                console.log(error);
-            });
+           
     };
 
     const getNextPosts = () => {
@@ -24,9 +22,6 @@ const Home = () => {
         .then((res) => {
             setPosts(posts.concat(res.data));
         })
-            // .catch((error) => {
-            //     console.log(error);
-            // });
     };
 
     useEffect(() => {
