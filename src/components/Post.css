@@ -3,6 +3,7 @@
     border: 1px solid black;
     margin: 5px 0;
     border-radius: 5px;
+    max-width: 600px;
 }
 
 .post > * {
@@ -35,6 +36,10 @@
 
 .post .likes {
     text-align: right;
+}
+
+.post .likes button {
+    margin: 0 5px;
 }
 
 .deleteConfirmation {
