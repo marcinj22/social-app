@@ -8,27 +8,28 @@ const Login = (props) => {
 
     const [formData, setFormData] = useState({
         username: '',
-        password: ''
-    });
+        password: '',
+    })
 
     const [loginMessage, setLoginMessage] = useState('')
 
     const handleInputChange = (e) => {
-        const target = e.target;
-        const name = target.name;
+        const target = e.target
+        const name = target.name
 
         setFormData({
             ...formData,
             [name]: target.value,
-        });
-    };
+        })
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post("https://akademia108.pl/api/social-app/user/login", {
-            username: formData.username,
-            password: formData.password
+        axios
+            .post("https://akademia108.pl/api/social-app/user/login", {
+                username: formData.username,
+                password: formData.password
         })
             .then((res) => {
 
